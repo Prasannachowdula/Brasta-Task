@@ -1,28 +1,31 @@
 import React from 'react'
-import header from "../assets/header.png"
-import { MdOutlinePhone } from "react-icons/md"
-
-const Hero = () => {
+import logo from "../assets/logo1.png"
+import { IoLogoFacebook } from "react-icons/io5";
+import { RiInstagramFill } from "react-icons/ri";
+const Footer = () => {
   return (
-    <div className='bg-black w-full text-white flex flex-col lg:flex-row gap-2 h-fit overflow-hidden'>
-      <div className='w-full lg:w-[65%] flex flex-col gap-6 lg:gap-7 p-6 lg:p-20 lg:py-36 h-full'>
-        <h1 className='font-semibold text-4xl sm:text-6xl lg:text-8xl font-poppins leading-tight lg:leading-[6rem]'>
-          Fresh Foods<br />
-          <span className='font-playwrite font-light'>with</span> Great taste
-        </h1>
-        <p className='font-albert-sans w-full lg:w-8/12 text-sm sm:text-base'>
-          Whether you’re here for a casual lunch, a romantic dinner, or a celebration, Baristra’s warm and attentive service promises to make your visit delightful. Enjoy the charm of our modern, stylish interior.
-        </p>
-        <button className='flex gap-3 rounded-full border border-white px-6 py-3 items-center w-fit text-sm sm:text-base'>
-          <MdOutlinePhone className='text-lg sm:text-xl' />
-          Call or Book
-        </button>
-      </div>
-      <div className='w-full lg:w-[35%] h-[300px] lg:h-full'>
-        <img src={header} className='w-full h-full object-cover' />
-      </div>
+    <div className='w-full flex flex-col font-instrument-sans text-white font px-32 py-10 h-[350px] bg-black'>
+        <div className='border-b flex justify-between items-center border-b-white '>
+           <div className='flex flex-col gap-2 items-center pb-10'><img src={logo} className='h-30 w-40 object-center '/>
+           <p>Phone number</p>
+           <p>+34 911 72 07 45</p>
+           </div>
+           <ul className='flex text-lg pr-4 gap-5'>
+            <li>Home</li>
+            <li>Menu</li>
+            <li>Wines</li>
+            <li>Christmas Dinner</li>
+           </ul>
+        </div>
+        <div className='flex justify-between items-center py-10'>
+        <p>copyright &copy; 2025 Brastra</p>
+        <div className='flex gap-3 text-4xl'>
+            <IoLogoFacebook/>
+            <RiInstagramFill/>
+        </div>
+        </div>
     </div>
   )
 }
 
-export default Hero
+export default Footer
