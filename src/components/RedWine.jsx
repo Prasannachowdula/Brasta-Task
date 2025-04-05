@@ -1,5 +1,5 @@
-import React from 'react';
-import red from "../assets/red.png";
+import React from 'react'
+import red from "../assets/red.png"
 
 const RedWine = () => {
   const Wines = [
@@ -12,23 +12,22 @@ const RedWine = () => {
   ];
 
   return (
-    <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 px-4 sm:px-8 md:px-16 lg:px-24 py-10">
-      {Wines.map((item, index) => (
-        <div
-          key={index}
-          className="w-full font-poppins flex flex-col h-[450px] sm:h-[500px] md:h-[600px]"
-        >
-          <div className="h-[75%] bg-[#2B2B2B] w-full flex justify-center items-center p-4">
-            <img src={red} className="max-h-full object-contain" alt={item.name} />
+    <div className='h-fit w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 px-4 sm:px-10 lg:px-24 py-10 sm:py-16 lg:py-20'>
+      {Wines.map((item, index) => {
+        return (
+          <div key={index} className='w-full font-poppins flex flex-col h-[500px] sm:h-[550px] lg:h-[600px]'>
+            <div className='h-[75%] sm:h-[80%] bg-[#2B2B2B] w-full flex justify-center items-center'>
+              <img src={red} />
+            </div>
+            <div className='flex flex-col gap-2 items-center py-5 '>
+              <h1 className='text-xl'>{item.name}</h1>
+              <p>€{item.price}</p>
+            </div>
           </div>
-          <div className="flex flex-col gap-1 items-center py-4 text-center">
-            <h1 className="text-lg sm:text-xl">{item.name}</h1>
-            <p className="text-sm sm:text-base font-medium">€{item.price}</p>
-          </div>
-        </div>
-      ))}
+        )
+      })}
     </div>
-  );
-};
+  )
+}
 
 export default RedWine;
